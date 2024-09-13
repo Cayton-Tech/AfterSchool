@@ -1,0 +1,51 @@
+"ClientNo","Name","Surname","DatePlaced","PlacedBy","Salary","FullTime"
+1,"Lucas","Florence",2/21/2010 0:00:00,"Boss Agencies",$17289.00,0
+2,"Illana","Alyssa",3/27/2010 0:00:00,"Cool Jobs Int",$27855.00,0
+3,"Keefe","Lawrence",4/8/2010 0:00:00,"Mchunu International",$28940.00,1
+4,"Adam","Isaiah",2/14/2010 0:00:00,"First Choice",$19142.00,0
+5,"Brianna","Amena",4/25/2010 0:00:00,"Kaiyal Recruits",$14328.00,0
+6,"Demetrius","Kaseem",3/30/2010 0:00:00,"Nellie Agencies",$24002.00,1
+7,"Garrett","Halla",2/8/2010 0:00:00,"Nkosi Recruitment Co",$17481.00,0
+8,"Chadwick","Steven",3/12/2010 0:00:00,"Mchunu International",$26626.00,1
+9,"Kerry","Cullen",2/18/2010 0:00:00,"Quick Find",$19805.00,0
+10,"Magee","Noah",1/23/2010 0:00:00,"Best Jobs Inc",$14260.00,0
+11,"Galena","Brody",3/29/2010 0:00:00,"Anderson Agencies",$24457.00,1
+12,"Serina","Keefe",2/14/2010 0:00:00,"Nkosi Recruitment Co",$19657.00,0
+13,"Richard","Quyn",4/2/2010 0:00:00,"First Choice",$28069.00,0
+14,"Sade","Caesar",2/21/2010 0:00:00,"Kaiyal Recruits",$27219.00,0
+15,"Malcolm","Ferdinand",3/19/2010 0:00:00,"KZN Recruitment Centre",$22844.00,0
+16,"Karyn","Cameran",3/11/2010 0:00:00,"Tash for Cash Agencies",$11814.00,1
+17,"Tad","Amelia",2/5/2010 0:00:00,"Cool Jobs Int",$10087.00,1
+18,"Amal","Callum",4/4/2010 0:00:00,"KZN Recruitment Centre",$19480.00,0
+19,"Chaney","Akeem",2/6/2010 0:00:00,"Boss Agencies",$28674.00,1
+20,"Karyn","Maxine",1/29/2010 0:00:00,"Cool Jobs Int",$14946.00,1
+21,"Lester","Hanae",2/9/2010 0:00:00,"Best Jobs Inc",$16636.00,0
+22,"Randall","Lawrence",1/10/2010 0:00:00,"Apollo International",$12526.00,0
+23,"Brent","Arden",4/17/2010 0:00:00,"Anderson Agencies",$10706.00,0
+24,"Jenna","Chastity",3/10/2010 0:00:00,"Nellie Agencies",$24017.00,0
+25,"Sawyer","Elaine",1/21/2010 0:00:00,"Instant Emp Int",$15491.00,1
+26,"Colin","Elmo",3/19/2010 0:00:00,"First Choice",$14283.00,1
+27,"Rachel","Dean",2/11/2010 0:00:00,"Kaiyal Recruits",$21105.00,0
+28,"Bryar","Kessie",3/28/2010 0:00:00,"Nkosi Recruitment Co",$19271.00,0
+29,"Vanna","Mannix",4/7/2010 0:00:00,"Tash for Cash Agencies",$26587.00,1
+30,"Howard","Jada",2/13/2010 0:00:00,"Best Jobs Inc",$16202.00,1
+31,"Fatima","Tanner",2/5/2010 0:00:00,"Cool Jobs Int",$21948.00,1
+32,"Damon","Teagan",1/28/2010 0:00:00,"Instant Emp Int",$18917.00,0
+33,"Colby","Lionel",4/11/2010 0:00:00,"First Choice",$15366.00,1
+34,"Ciara","Martina",4/3/2010 0:00:00,"Apollo International",$12349.00,0
+35,"Ferdinand","Fallon",1/23/2010 0:00:00,"Cool Jobs Int",$24328.00,1
+36,"Grace","Sydnee",2/16/2010 0:00:00,"Nellie Agencies",$11215.00,0
+37,"Kylynn","Vance",1/17/2010 0:00:00,"Nkosi Recruitment Co",$26683.00,0
+38,"Brett","Geraldine",3/31/2010 0:00:00,"Anderson Agencies",$16477.00,1
+39,"Germaine","Charity",3/20/2010 0:00:00,"Kaiyal Recruits",$27390.00,1
+40,"Genevieve","Nicholas",4/2/2010 0:00:00,"Nellie Agencies",$10995.00,1
+41,"Quemby","Colby",2/4/2010 0:00:00,"Quick Find",$23598.00,1
+42,"Ryan","Deanna",2/9/2010 0:00:00,"Anderson Agencies",$15628.00,0
+43,"Lara","Norman",4/1/2010 0:00:00,"Boss Agencies",$25928.00,0
+44,"Nichole","Clark",4/8/2010 0:00:00,"Instant Emp Int",$19713.00,1
+45,"Todd","Harper",4/17/2010 0:00:00,"First Choice",$16719.00,1
+46,"Amanda","Brett",4/1/2010 0:00:00,"Cool Jobs Int",$21250.00,1
+47,"Claudia","Logan",2/11/2010 0:00:00,"Instant Emp Int",$14724.00,0
+48,"Judith","Ashely",3/29/2010 0:00:00,"First Choice",$18587.00,1
+49,"Cade","Odessa",2/25/2010 0:00:00,"Kaiyal Recruits",$22020.00,0
+50,"Blaze","Ashton",2/19/2010 0:00:00,"First Choice",$27072.00,1

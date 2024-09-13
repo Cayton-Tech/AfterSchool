@@ -1,0 +1,21 @@
+"AgencyName","Province","International","NumPrevPlacements"
+"Anderson Agencies","Mpumalanga",1,11552
+"Apollo International","Western Cape",1,18204
+"Best Jobs Inc","KwaZulu-Natal",0,29058
+"Boss Agencies","KwaZulu-Natal",1,24398
+"Cool Jobs Int","Mpumalanga",1,20443
+"First Choice","Western Cape",1,10409
+"Instant Emp Int","Western Cape",1,25627
+"Kaiyal Recruits","Mpumalanga",0,13097
+"King Employment","Gauteng",1,20887
+"KZN Recruitment Centre","KwaZulu-Natal",0,25145
+"Mchunu International","Mpumalanga",1,20994
+"Mpu Job Centre","Mpumalanga",1,16924
+"Ndwedwe Job Find","Mpumalanga",1,21579
+"Nellie Agencies","Gauteng",0,28167
+"Nkosi Recruitment Co","Limpopo",1,22586
+"Only the Best","Mpumalanga",0,24234
+"Quick Find","KwaZulu-Natal",0,22850
+"Recruitment for Leaders","KwaZulu-Natal",0,18523
+"Ronnies Agencies","Mpumalanga",0,24600
+"Tash for Cash Agencies","Mpumalanga",0,10778

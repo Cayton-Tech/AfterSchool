@@ -1,0 +1,171 @@
+object frmQuestion3: TfrmQuestion3
+  Left = 0
+  Top = 0
+  Caption = 'Question 3'
+  ClientHeight = 706
+  ClientWidth = 658
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -15
+  Font.Name = 'Arial'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 17
+  object lblOutput: TLabel
+    Left = 0
+    Top = 243
+    Width = 658
+    Height = 17
+    Align = alTop
+    Caption = '    Output area:'
+    ExplicitWidth = 97
+  end
+  object pnlClose: TPanel
+    Left = 0
+    Top = 649
+    Width = 658
+    Height = 57
+    Align = alBottom
+    TabOrder = 0
+    DesignSize = (
+      658
+      57)
+    object bmbClose: TBitBtn
+      Left = 531
+      Top = 13
+      Width = 113
+      Height = 33
+      Anchors = [akRight, akBottom]
+      DoubleBuffered = True
+      Kind = bkClose
+      ParentDoubleBuffered = False
+      TabOrder = 0
+    end
+  end
+  object pnlInput: TPanel
+    Left = 0
+    Top = 0
+    Width = 658
+    Height = 243
+    Align = alTop
+    BevelInner = bvLowered
+    TabOrder = 1
+    object lbluserComponents: TLabel
+      Left = 319
+      Top = 8
+      Width = 128
+      Height = 17
+      Align = alCustom
+      Caption = '  User components:'
+    end
+    object grpInput: TGroupBox
+      Left = 2
+      Top = 2
+      Width = 311
+      Height = 239
+      Align = alLeft
+      Caption = '  User input:'
+      TabOrder = 0
+      object lblWorkshopQuestion: TLabel
+        Left = 16
+        Top = 30
+        Width = 254
+        Height = 17
+        Caption = 'Select the workshop you want to attend'
+      end
+      object lblTopic: TLabel
+        Left = 16
+        Top = 72
+        Width = 71
+        Height = 17
+        Caption = 'Workshop:'
+      end
+      object lblDay: TLabel
+        Left = 16
+        Top = 112
+        Width = 30
+        Height = 17
+        Caption = 'Day:'
+      end
+      object cboTopic: TComboBox
+        Left = 104
+        Top = 72
+        Width = 171
+        Height = 25
+        Style = csDropDownList
+        ItemIndex = 0
+        TabOrder = 0
+        Text = 'Aerobics'
+        Items.Strings = (
+          'Aerobics'
+          'Body building'
+          'Cardio'
+          'Dancing'
+          'Energy supplements'
+          'First Aid')
+      end
+      object lstDay: TListBox
+        Left = 104
+        Top = 120
+        Width = 121
+        Height = 97
+        ItemHeight = 17
+        Items.Strings = (
+          'Day 1'
+          'Day 2'
+          'Day 3'
+          'Day 4')
+        TabOrder = 1
+      end
+    end
+    object btnDisplay: TButton
+      Left = 360
+      Top = 40
+      Width = 129
+      Height = 33
+      Caption = 'Display'
+      TabOrder = 1
+      OnClick = btnDisplayClick
+    end
+    object btnBook: TButton
+      Left = 360
+      Top = 79
+      Width = 129
+      Height = 33
+      Caption = 'Book a workshop'
+      TabOrder = 2
+      OnClick = btnBookClick
+    end
+    object btnCancelWorkshop: TButton
+      Left = 360
+      Top = 174
+      Width = 129
+      Height = 33
+      Caption = 'Cancel Workshop'
+      TabOrder = 3
+      OnClick = btnCancelWorkshopClick
+    end
+    object btnWater: TButton
+      Left = 360
+      Top = 127
+      Width = 129
+      Height = 33
+      Caption = 'Cases of Water'
+      TabOrder = 4
+      OnClick = btnWaterClick
+    end
+  end
+  object redDisplay: TRichEdit
+    Left = 18
+    Top = 280
+    Width = 601
+    Height = 345
+    Lines.Strings = (
+      'redDisplay')
+    TabOrder = 2
+  end
+end

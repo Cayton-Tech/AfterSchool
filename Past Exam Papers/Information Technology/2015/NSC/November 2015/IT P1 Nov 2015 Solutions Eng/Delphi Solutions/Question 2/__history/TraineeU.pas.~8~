@@ -1,0 +1,115 @@
+unit TraineeU;
+//A solution for Question 2.1 - class unit
+
+interface
+
+type
+   TTrainee = class(TObject)
+     private
+       fName                  : string;
+       fRegCode               : string;
+       fExpiryDate            : string;
+       fSessionsCompleted     : integer;
+
+       function determineExpDate(sDate : string) : string;
+
+     public
+        constructor Create(Name, RegCode, RegDate: string);
+        procedure setSessionsCompleted(iSessions : integer);
+        procedure increaseSessionsCompleted;
+        function hasExpired(CurrentDate : string) : boolean;
+        function evaluateProgress(iMax : integer) : string;
+        function toString : string;
+        function GetName : string;
+        function GetCode : string;
+        destructor RemoveFromMemory;
+   end;
+
+implementation
+
+uses SysUtils, Math;
+{ TTrainee }
+
+//======   Question 2.1.1  ===================================
+
+function TTrainee.determineExpDate(sDate: string): string;
+var
+  iYear : integer;
+
+begin
+   iYear := StrToInt(copy(sDate,1,4)) + 2;
+   result := IntToStr(iYear) + copy(sdate,5);
+end;
+
+//======   Question 2.1.2  ===================================
+
+constructor TTrainee.Create(Name, RegCode, RegDate: string);
+begin
+  fName        := Name;
+  fRegCode     := RegCode;
+  fExpiryDate  := addTwoYears(RegDate);
+  fSessionsCompleted := 0;
+end;
+
+
+//======   Question 2.1.3  ===================================//
+
+procedure TTrainee.setSessionsCompleted(iSessions : integer);
+begin
+  fSessionsCompleted := iSessions;
+end;
+
+//======   Question 2.1.4  ===================================
+procedure TTrainee.increaseSessionsCompleted;
+begin
+   Inc(fSessionsCompleted, 1);
+end;
+
+//======   Question 2.1.5  ===================================
+function TTrainee.hasExpired(CurrentDate: string): boolean;
+begin
+  if CurrentDate <= fExpiryDate then
+    result := false
+  else Result := true;
+end;
+
+//======   Question 2.1.6  ===================================
+function TTrainee.evaluateProgress(iMax: integer): string;
+var
+  iProgress : integer;
+begin
+   iProgress := Trunc((fSessionsCompleted / iMax) * 100);
+   if iProgress >= 75 then
+     Result := fName + ' qualifies as an instructor'
+   else
+     Result := 'Progress: ' + IntToStr(iProgress) + '%';
+end;
+
+//======   Question 2.1.7  ===================================
+function TTrainee.toString: string;
+begin
+   Result := fName + ' [' + fRegCode + '] ' + #13 +
+             'Expiry date: ' + fExpiryDate + #13 +
+             'Completed sessions: ' + IntToStr(fSessionsCompleted);
+end;
+
+
+//======  Methods supplied ===============================
+
+function TTrainee.GetName: string;
+begin
+  Result := fName;
+end;
+
+function TTrainee.GetCode: string;
+begin
+  Result := fRegCode;
+end;
+
+destructor TTrainee.RemoveFromMemory;
+begin
+    Destroy;
+end;
+//================================================================
+
+end.
