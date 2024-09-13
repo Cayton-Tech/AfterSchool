@@ -1,0 +1,45 @@
+body { 
+        font-family: Arial, sans-serif; 
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 20px; 
+}
+        
+h1, h2 { 
+        color: #333; 
+        text-align: center; 
+}
+
+
+
+#search-container { 
+        margin: 20px 0; 
+}
+
+#search { 
+        width: 100%; 
+        padding: 10px; 
+        font-size: 16px; 
+}
+
+#results {
+        list-style-type: none; 
+        padding: 0; 
+}
+
+.result-item { 
+        background-color: #f6f8fa; 
+        margin-bottom: 10px; 
+        padding: 15px; 
+        border-radius: 5px; 
+}
+
+.result-item a { 
+        color: #0366d6; 
+        text-decoration: none; 
+        font-weight: bold; 
+}
+        
+.result-item a:hover { 
+        text-decoration: underline; 
+}

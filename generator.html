@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate files.js for GitHub Pages</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    #output { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Generate files.js for GitHub Pages</h1>
+  <button id="selectDirectoryBtn">Select PDF Directory</button>
+  <div id="output"></div>
+  <script>
+    const selectDirectoryBtn = document.getElementById('selectDirectoryBtn');
+    const outputDiv = document.getElementById('output');
+    
+    selectDirectoryBtn.addEventListener('click', handleDirectorySelect);
+
+    async function handleDirectorySelect() {
+      try {
+        const directoryHandle = await window.showDirectoryPicker();
+        const files = await processDirectory(directoryHandle);
+        const jsContent = generateFileJs(files);
+        createDownloadLink(jsContent);
+      } catch (err) {
+        outputDiv.textContent = `Error: ${err.message}`;
+      }
+    }
+
+    async function processDirectory(directoryHandle, currentPath = '') {
+      const files = [];
+      for await (const entry of directoryHandle.values()) {
+        const entryPath = currentPath ? `${currentPath}/${entry.name}` : entry.name;
+        if (entry.kind === 'file' && entry.name.toLowerCase().endsWith('.pdf')) {
+          const title = formatTitle(entryPath);
+          // Use forward slashes and remove leading './' for GitHub Pages compatibility
+          const path = entryPath.replace(/\\/g, '/').replace(/^\.\//, '');
+          files.push({ path, title });
+        } else if (entry.kind === 'directory') {
+          const subFiles = await processDirectory(entry, entryPath);
+          files.push(...subFiles);
+        }
+      }
+      return files;
+    }
+
+    function formatTitle(path) {
+      // Extract the filename without extension
+      const filename = path.split('/').pop().replace(/\.pdf$/i, '');
+      
+      // Extract subject from the path (assuming it's the first folder)
+      const subject = path.split('/')[0];
+      
+      // Combine subject and filename, replace underscores with spaces
+      return `${subject} - ${filename}`.replace(/_/g, ' ');
+    }
+
+    function generateFileJs(files) {
+      const timestamp = new Date().toISOString();
+      return `// Generated on ${timestamp}
+// Total files: ${files.length}
+
+const files = ${JSON.stringify(files, null, 2)};
+`;
+    }
+
+    function createDownloadLink(content) {
+      const blob = new Blob([content], { type: 'application/javascript' });
+      const url = URL.createObjectURL(blob);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = url;
+      downloadLink.download = 'files.js';
+      downloadLink.textContent = 'Download files.js';
+      downloadLink.style.display = 'block';
+      downloadLink.style.marginTop = '20px';
+      
+      outputDiv.innerHTML = ''; // Clear previous output
+      outputDiv.appendChild(downloadLink);
+      
+      // Automatically click the download link
+      downloadLink.click();
+    }
+  </script>
+</body>
+</html>

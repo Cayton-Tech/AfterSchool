@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>AfterSchool</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+     <h1>AfterSchool</h1>
+     <h2>Matric Past Paper and Memo Finder</h2>
+     <div id="search-container">
+       <input type="text" id="search" placeholder="Search for question papers or memos by subject...">
+     </div>
+     <ul id="results"></ul>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.basic.min.js"></script>
+     <script src="files.js"></script>
+     <script>
+       document.addEventListener('DOMContentLoaded', function() {
+         const fuse = new Fuse(files, {
+           keys: ['title', 'path'],
+           includeScore: true,
+           threshold: 0.4,
+         });
+         const searchInput = document.getElementById('search');
+         const results = document.getElementById('results');
+         searchInput.addEventListener('input', performSearch);
+
+         function performSearch() {
+           const value = searchInput.value;
+           if (value.length > 2) {
+             const searchResults = fuse.search(value);
+             displayResults(searchResults);
+           } else {
+             results.innerHTML = '';
+           }
+         }
+
+         function displayResults(searchResults) {
+           if (searchResults.length === 0) {
+             results.innerHTML = '<li>No results found.</li>';
+             return;
+           }
+           results.innerHTML = searchResults.map(result => `
+               <li class="result-item">
+                   <a href="${result.item.path}" target="_blank">
+                       ${result.item.title}
+                   </a>
+               </li>
+           `).join('');
+         }
+       });
+     </script>
+   </body>
+   </html>
