@@ -1,45 +1,71 @@
+/* Basic styling for the body (mobile-first) */
 body { 
-        font-family: Arial, sans-serif; 
-        max-width: 800px; 
-        margin: 0 auto; 
-        padding: 20px; 
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 10px; 
+  text-align: center; /* Center align content by default */
 }
-        
+
+/* Styles for headings */        
 h1, h2 { 
-        color: #333; 
-        text-align: center; 
+  color: #333; 
 }
 
-
-
+/* Styles for the search container */
 #search-container { 
-        margin: 20px 0; 
+  margin: 10px 0; 
 }
 
+/* Styles for the search input field */
 #search { 
-        width: 100%; 
-        padding: 10px; 
-        font-size: 16px; 
+  width: 100%; 
+  padding: 8px; 
+  font-size: 16px; 
+  box-sizing: border-box; /* Include padding and border in the total width */
 }
 
+/* Styles for the results list */
 #results {
-        list-style-type: none; 
-        padding: 0; 
+  list-style-type: none; 
+  padding: 0; 
 }
 
+/* Styles for individual result items */
 .result-item { 
-        background-color: #f6f8fa; 
-        margin-bottom: 10px; 
-        padding: 15px; 
-        border-radius: 5px; 
+  background-color: #f6f8fa; 
+  margin-bottom: 8px; 
+  padding: 12px; 
+  border-radius: 5px; 
+  text-align: left; /* Align text to the left within list items */
 }
 
+/* Styles for links within result items */
 .result-item a { 
-        color: #0366d6; 
-        text-decoration: none; 
-        font-weight: bold; 
+  color: #0366d6; 
+  text-decoration: none; 
+  font-weight: bold; 
 }
         
+/* Styles for links on hover */
 .result-item a:hover { 
-        text-decoration: underline; 
+  text-decoration: underline; 
+}
+
+/* Media query for larger screens (typically tablets and desktops) */
+@media (min-width: 768px) {
+  body {
+    padding: 20px;
+    text-align: center; /* Center content on larger screens */
+  }
+
+  #search-container {
+    width: 50%; /* Reduce search container width on larger screens */
+    margin: 20px auto; /* Center the search container horizontally */
+  }
+
+  .result-item {
+    margin-bottom: 10px;
+    padding: 15px;
+  }
 }
